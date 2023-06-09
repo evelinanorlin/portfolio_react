@@ -1,12 +1,10 @@
 import { useState } from "react";
 import { useEffect } from "react";
+import NavBar from "./NavBar";
 
 export default function DesktopNav(){
-  const [isVisible, setIsVisible] = useState(false)
-  const burger = (
-  <div className="burger">
-    <div className="burger-line"></div>
-  </div>);
+  const [burgerVisible, setBurgerVisible] = useState(false);
+  const [navBarVisible, setNavBarVisible] = useState(true);
 
 useEffect(() => {
   window.addEventListener("scroll", listenToScroll);
@@ -15,21 +13,33 @@ useEffect(() => {
 })
 
 const listenToScroll = () => {
-  const heightToShowFrom = 100;
+  const heightToShowFrom = 1;
   const winScroll = document.body.scrollTop ||
     document.documentElement.scrollTop;
 
   if (winScroll > heightToShowFrom) {
-    setIsVisible(true);
+    setBurgerVisible(true);
+    setNavBarVisible(false);
   } else {
-    setIsVisible(false);
+    setBurgerVisible(false);
+    setNavBarVisible(true);
   }
 };
 
+const showNav = () => {
+  console.log('click')
+  if(navBarVisible){
+    setNavBarVisible(false)
+  } else{
+    setNavBarVisible(true)
+  }
+}
+
   return (<nav> 
-    <div className="nav-flex" id="desktop-nav">
+    {navBarVisible && (
+    <div className="nav-flex">
       <a href="" className="logo-img"
-        ><img src="public/evelina_logga.svg" height="120" width="120"
+        ><img src="/evelina_logga.svg" height="120" width="120"
       /></a>
       <div className="nav-links">
         <a href="#">om</a>
@@ -38,6 +48,11 @@ const listenToScroll = () => {
         <a href="#">kontakt</a>
       </div>
     </div>
-    {isVisible && burger}
+  )}
+    {burgerVisible && (
+      <div className="burger" onClick={showNav}>
+        <div className="burger-line"></div>
+      </div>
+    )}
   </nav>)
 }

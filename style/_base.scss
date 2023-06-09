@@ -2,15 +2,31 @@ $light: #fffff0;
 $dark: #222222;
 $accent: #B2E0DC;
 
+@font-face {
+  font-family: 'Astoria';
+  src: url('/tan_astoria.ttf');
+}
+
 // general
 body{
-  background: $light;
+  background: $dark;
   padding: 0;
   margin: 0;
   overflow-x: hidden;
 }
 
-h1, h2, h3, h4{
+h1, h2{
+  font-family: 'Astoria';
+  font-weight: 200;
+  letter-spacing: 0.4rem;
+  text-transform: uppercase;
+}
+
+h1{
+  font-size: 5rem;
+}
+
+h3, h4{
   font-family: 'Libre Baskerville', serif;
   font-weight: 400;
 }
@@ -149,6 +165,7 @@ nav{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: transparent;
 
   img{
     animation: rotation 15s infinite linear;
@@ -247,54 +264,69 @@ nav{
 
 
 // hero
-.hero{
-  width: 90%;
-  margin: 0 auto;
-  margin-top: 64px;
+.heroWrap{
+  background-image: url('/background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  top: -120px;
 
-  .evelina{
-    display:none;
-  }
-
-  .about{
-    display: none;
-  }
-
-  .eve, .lina{
-    display: block;
-    margin: 0 auto;
-    height: 150px;
-    width: auto;
-    position: relative;
-    z-index: 2;
-  }
-
-  .lina{
-    margin-top: 16px;
-  }
-
-  .profile-picture{
-    display: block;
-    margin: 0 auto;
-    position: relative;
-    z-index: 1;
-    top: -158px;
+  .hero{
     width: 100%;
-    height: auto;
-  }
+    margin: 0 auto;
+    padding-top: 120px;
 
-  h1{
-    font-size: 2rem;
-    position: relative;
-    top: -126px;
-    span{
-      font-style: italic;
+  
+    h1{
+      display:none;
     }
-  }
-  button{
-    margin-bottom: 16px;
-    position: relative;
-    top: -94px;
+  
+    .about{
+      display: none;
+    }
+  
+    .eve, .lina{
+      display: block;
+      margin: 0 auto;
+      height: 150px;
+      width: auto;
+      position: relative;
+      z-index: 2;
+    }
+  
+    .lina{
+      margin-top: 16px;
+    }
+  
+    .hero-flex{
+      .profile-picture{
+        display: block;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+        top: -158px;
+        width: 100%;
+        height: 500px;
+      }
+    
+      button{
+        margin-bottom: 16px;
+        position: relative;
+        top: -94px;
+      }
+
+      h3{
+        text-align: left;
+        width: 90%;
+        margin: 0 auto;
+        position: relative;
+        bottom: 100px;
+        span{
+          font-style: italic;
+        }
+      }
+
+    }
   }
 }
 
@@ -304,6 +336,8 @@ nav{
   padding: 64px 0 192px 0;
   background: $dark;
   color: $light;
+  position: relative;
+  top: -120px;
 
   .content{
     .divider-line{
@@ -327,7 +361,8 @@ nav{
   width: 80%;
   height: auto;
   position: relative;
-  top: -128px;
+  z-index: 3;
+  top: -250px;
   margin: 0 auto;
 }
 
@@ -335,8 +370,15 @@ nav{
 
 .portfolio{
   position: relative;
-  top: -64px;
+  top: -480px;
   color: $dark;
+  background-image: url('/background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .content{
+    padding-top: 300px;
+  }
 
   .divider-line{
     background: $dark;
@@ -364,6 +406,8 @@ nav{
   color: $light;
   padding: 64px 0;
   text-align: center;
+  position: relative;
+  top: -480px;
   
   .divider-line{
     background: $light;

@@ -1,3 +1,5 @@
+import { ParallaxBanner, ParallaxBannerLayer, ParallaxProvider, Parallax } from 'react-scroll-parallax';
+
 export default function Services(){
   return (
     <>
@@ -33,14 +35,21 @@ export default function Services(){
       <button className="light-button">kontakt</button>
     </div>
   </section>
-  <img
+
+  <div className="coffee-img">
+  <ParallaxBanner style={{ aspectRatio: '1 / 1.2' }}>
+      <ParallaxBannerLayer image="/chemex.jpg" speed={-15} />
+    </ParallaxBanner>
+  </div>
+  
+  {/* <img
     src="public/chemex.jpg"
     height="400"
     width="300"
     alt="coffee pouring into a cup"
     loading="lazy"
     className="coffee-img"
-  />
+  /> */}
   </>
   )
 }

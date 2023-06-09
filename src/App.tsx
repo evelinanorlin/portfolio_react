@@ -4,6 +4,7 @@ import Header from './components/Header'
 import Services from './components/Services'
 import Portfolio from './components/Portfolio'
 import Contact from './components/Contact'
+import { ParallaxProvider } from 'react-scroll-parallax'
 
 
 function App() {
@@ -11,11 +12,13 @@ function App() {
 
   return (
     <>
-      <NavBar></NavBar>
-      <Header></Header>
-      <Services></Services>
-      <Portfolio></Portfolio>
-      <Contact></Contact>
+      <ParallaxProvider>
+        <NavBar></NavBar>
+        <Header></Header>
+        <Services></Services>
+        <Portfolio></Portfolio>
+        <Contact></Contact>
+      </ParallaxProvider>
     </>
   )
 }

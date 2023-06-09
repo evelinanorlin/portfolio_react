@@ -4,34 +4,44 @@
     text-align: left;
   }
 
-  .hero{
-    text-align: left;
-    .eve, .lina{
-      display: none;
-    }
-    .evelina{
-      display: block;
-      width: 100%;
-      height: auto;
-      position: relative;
-      z-index: 2;
-      left: -40px;
-    }
-    .about{
-      display: block;
+  .heroWrap{
+    .hero{
+      text-align: left;
+      width: 90%;
+      margin: 0 auto;
+      .eve, .lina{
+        display: none;
+      }
+      h1{
+        font-size: 12rem;
+        margin-top: 160px;
+        display: relative;
+        z-index: 4 !important;
+      }
+      
     }
     .hero-flex{
       display: flex;
       flex-direction: row-reverse;
-    }
-    .profile-picture{
-      width: 50%;
-      top: -190px;
-    }
-    p{
-      position: relative;
-      top: -126px;
-      width: 80%;
+      
+      .profile-picture{
+        position: relative !important;
+        top: -400px !important;
+        height: 500px;
+        width: 130% !important;
+      }
+
+      h3{
+        display: block;
+        width: 100%;
+        margin-top: -290px;
+      }
+      button{
+        display: block;
+      }
+      .buttons{
+        margin-top: 150px;
+      }
     }
   }
 

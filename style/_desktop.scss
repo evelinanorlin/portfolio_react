@@ -17,21 +17,31 @@
     .burger{
       display: block;
       right: 32px;
-      top: 32px;
+      top: 56px;
+      position: fixed;
+      z-index: 6;
     }
 
     .nav-flex{
-      width: 90%;
+      width: 100%;
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: fixed;
+      z-index: 5;
+      top:0px;
+      background: $light;
       
       .logo-img{
         animation: rotation 15s infinite linear;
         &:hover{
           animation: none;
         }
+      }
+
+      .nav-links{
+        padding-right: 90px;
       }
 
       a{
@@ -50,15 +60,23 @@
   }
 
   .hero{
-    max-height: 110vh;
+    max-height: 100vh;
+    margin-top: 200px;
     .evelina{
       width: 70%;
-      top: -100px;
+      top: -80px;
     }
 
     .profile-picture{
-      width: 40%;
-      top: -500px;
+      width: 50%;
+      height: 700px;
+      top: -400px;
+      right: 50px;
+
+      img{
+        width: 100%;
+        height: auto;
+      }
     }
 
     h1, p, button{
@@ -84,9 +102,9 @@
     }
   }
   .coffee-img{
-    width: 40%;
-    height: 600px;
-    top: -300px;
+    width: 30%;
+    height: 400px;
+    top: -400px;
     object-fit: cover;
   }
 
