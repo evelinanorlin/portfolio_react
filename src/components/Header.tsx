@@ -36,12 +36,12 @@ export default function Header(){
           Frilansande <span>webbutvecklare</span> med passion för funktionell
           <span>kod</span> & krispig <span>design</span>.
         </h1>
-        <p className="about">
+        {/* <p className="about">
           Just nu läser till front-end utvecklare. Vid sidan av mina studier
           läser jag kurser i grafisk design och UX-design. När jag inte sitter
           vid datorn och skapar hittar du mig i yogasalen, på en klätterklippa
           eller ute till havs.
-        </p>
+        </p> */}
         <button className="dark-button">jobba med mig</button>
         <button className="dark-button">portfolio</button>
       </div>
