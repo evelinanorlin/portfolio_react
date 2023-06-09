@@ -1,34 +1,30 @@
-import { useState } from "react"
+import { useState } from "react";
+import { useEffect } from "react";
 
 export default function DesktopNav(){
-  const [burger, setBurger] = useState(<div className="burger">
-  <div className="burger-line"></div>
-</div>);
+  const [isVisible, setIsVisible] = useState(false)
+  const burger = (
+  <div className="burger">
+    <div className="burger-line"></div>
+  </div>);
 
-  // const showBurger = () => {
-  //   if(window.pageYOffset === 0){
-  //     setBurger(<></>)
-  //     console.log('ontop')
-  //   }else{
-  //   setBurger(<div className="burger">
-  //     <div className="burger-line"></div>
-  //   </div>)
-  //   console.log('scrollin');
-  //   }
-  // }
+useEffect(() => {
+  window.addEventListener("scroll", listenToScroll);
+  return () =>
+     window.removeEventListener("scroll", listenToScroll);
+})
 
-  // const scrollTimer = () => {
-  //   console.log('körs');
-  //   const timeOut = setTimeout(() => {
-  //     showBurger();
-  //     console.log('yes')
-  //   }, 1000);
-  //   // const timeOut = setTimeout(showBurger, 200);
-  //   clearTimeout(timeOut);
-  // }
+const listenToScroll = () => {
+  const heightToShowFrom = 100;
+  const winScroll = document.body.scrollTop ||
+    document.documentElement.scrollTop;
 
-  // window.addEventListener('scroll', scrollTimer);
-
+  if (winScroll > heightToShowFrom) {
+    setIsVisible(true);
+  } else {
+    setIsVisible(false);
+  }
+};
 
   return (<nav> 
     <div className="nav-flex" id="desktop-nav">
@@ -42,6 +38,6 @@ export default function DesktopNav(){
         <a href="#">kontakt</a>
       </div>
     </div>
-    {burger}
+    {isVisible && burger}
   </nav>)
 }

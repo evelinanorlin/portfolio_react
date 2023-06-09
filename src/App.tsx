@@ -1,6 +1,9 @@
 import { useState } from 'react'
 import NavBar from './components/NavBar'
 import Header from './components/Header'
+import Services from './components/Services'
+import Portfolio from './components/Portfolio'
+import Contact from './components/Contact'
 
 
 function App() {
@@ -10,6 +13,9 @@ function App() {
     <>
       <NavBar></NavBar>
       <Header></Header>
+      <Services></Services>
+      <Portfolio></Portfolio>
+      <Contact></Contact>
     </>
   )
 }
