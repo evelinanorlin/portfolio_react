@@ -31,7 +31,7 @@
       position: fixed;
       z-index: 5;
       top:0px;
-      background: $light;
+      //background: $light;
       
       .logo-img{
         animation: rotation 15s infinite linear;
@@ -58,40 +58,43 @@
       }
     }
   }
-
-  .hero{
-    max-height: 100vh;
-    margin-top: 200px;
-    .evelina{
-      width: 70%;
-      top: -80px;
-    }
-
-    .profile-picture{
-      width: 50%;
-      height: 700px;
-      top: -400px;
-      right: 50px;
-
-      img{
-        width: 100%;
-        height: auto;
+  .heroWrap{
+    top: -200px;
+    .hero{
+      max-height: 110vh;
+      margin-top: 150px;
+      h1{
+        position: relative;
+        font-size: 14rem;
+        z-index: 4;
       }
-    }
+      .hero-flex{
+        .profile-picture{
+          width: 70% !important;
+          height: 550px !important;
+          top: -450px !important;
+          right: 50px;
+          z-index: 3;
+        }
+    
+        h3{
+          margin-top: -100px;
+          margin-left: 0;
+          width: 70%;
+        }
+        .buttons{
+          margin-left: 0;
+          display: flex;
+          justify-content: flex-start;
+          margin-top: 60px;
 
-    h1, p, button{
-      top: -250px;
-    }
-
-    h1, p{
-      width: 75%;
-    }
-    p{
-      margin: 50px 0 64px 0;
-    }
-
-    button{
-      margin-right: 32px;
+          button{
+            width: 300px;
+            padding: 10px 1px;
+            margin: 0 30px 0 0;
+          }
+        }
+      }
     }
   }
 

@@ -23,8 +23,8 @@ export default function Header(){
       <ParallaxBanner layers={[{ image: '/evelina_norlin.jpg', speed: -10 }]} className={"profile-picture "} />
         <div>
           <h3>
-            Frilansande <span>webbutvecklare</span> med passion för funktionell
-            <span>kod</span> & krispig <span>design</span>.
+            Frilansande <span>webbutvecklare</span> med passion för funktionell 
+            <span> kod</span> & krispig <span>design</span>.
           </h3>
           <div className="buttons">
           <button className="dark-button">jobba med mig</button>

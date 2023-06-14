@@ -5,6 +5,7 @@ import Services from './components/Services'
 import Portfolio from './components/Portfolio'
 import Contact from './components/Contact'
 import { ParallaxProvider } from 'react-scroll-parallax'
+import Projects from './components/Projects'
 
 
 function App() {
@@ -15,9 +16,10 @@ function App() {
       <ParallaxProvider>
         <NavBar></NavBar>
         <Header></Header>
-        <Services></Services>
-        <Portfolio></Portfolio>
-        <Contact></Contact>
+        <Projects></Projects>
+        {/* <Services></Services>
+        <Portfolio></Portfolio> */}
+        {/* <Contact></Contact> */}
       </ParallaxProvider>
     </>
   )

@@ -14,11 +14,10 @@
       }
       h1{
         font-size: 12rem;
-        margin-top: 160px;
-        display: relative;
-        z-index: 4 !important;
+        display: block;
+        margin-top: 0;
+        color: $dark;
       }
-      
     }
     .hero-flex{
       display: flex;
@@ -26,21 +25,21 @@
       
       .profile-picture{
         position: relative !important;
-        top: -400px !important;
-        height: 500px;
-        width: 130% !important;
+        top: -200px !important;
+        height: 600px !important;
+        width: 150% !important;
       }
 
       h3{
         display: block;
         width: 100%;
-        margin-top: -290px;
+        margin-top: -200px;
       }
       button{
         display: block;
       }
       .buttons{
-        margin-top: 150px;
+        margin-top: 130px;
       }
     }
   }
